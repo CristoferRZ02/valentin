@@ -1,0 +1,178 @@
+/*
+    ** All elements border-box
+*/
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    ** Root element font size
+    ** No default margins and paddings
+*/
+html,
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    **root elements display block
+*/
+html,
+body {
+  display: block;
+}
+
+/*
+    ** Body main style
+*/
+body {
+  line-height: 1.317101995;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  background-color: #ffffff;
+}
+
+button:focus {
+  outline: 0;
+}
+
+img,
+embed,
+svg,
+audio,
+canvas,
+iframe,
+video {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid #dfdfdf;
+  margin: 0;
+}
+
+body {
+  color: #5c7470;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+
+h1 span {
+  color: #17B6D2;
+}
+
+p {
+  margin: 0;
+}
+
+.cards-grid {
+  display: flex;
+  grid-gap: 80px;
+  padding-bottom: 60px;
+}
+
+/* FLIP CARD */
+.flip-card {
+  width: 320px;
+  height: 504px;
+  perspective: 2000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 28px;
+    transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+    transform-style: preserve-3d;
+    transform: rotateY(0deg); /* Aplica la rotación desde el principio */
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flip-card-back {
+    font-size: 1.25rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    border-radius: 28px;
+    transform: rotateY(180deg);
+    font-weight: bold; /* Añade negritas al texto en el lado "back" */
+    font-family: Arial, sans-serif;
+  }
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(-180deg);
+}
+
+
+.centered-button {
+    text-align: center;
+    margin-top: 20px; /* Ajusta el espaciado según tus necesidades */
+  }
+  
+  .redirect-button {
+    display: inline-block;
+    padding: 15px 30px; /* Ajusta el tamaño del botón según tus necesidades */
+    background-color: #5D156D;
+    color: #F5F3F3;
+    text-decoration: none;
+    border-radius: 8px; /* Ajusta la curvatura de los bordes */
+    font-weight: bold;
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    border: 2px solid #000000; /* Ajusta el color y ancho del borde */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Agrega una transición suave */
+  }
+  
+  .redirect-button:hover {
+    background-color: #5D156D
+    ; /* Cambia el color de fondo al pasar el mouse */
+    border-color: #000000; /* Cambia el color del borde al pasar el mouse */
+  }
+
+
+  .flip-card:nth-child(1) .flip-card-inner {
+    border: 2px solid #5A1B81; /* Color del borde para la primera carta */
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3); /* Efecto de sombra para la primera carta */
+    background-color: #E0D1F5; /* Fondo de la tarjeta "back" para la primera carta */
+  }
+  
+  .flip-card:nth-child(2) .flip-card-inner {
+    border: 2px solid #e74c3c; /* Color del borde para la segunda carta */
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3); /* Efecto de sombra para la segunda carta */
+    background-color: #EAC5C5; /* Fondo de la tarjeta "back" para la segunda carta */
+  }
+  
+  .flip-card:nth-child(3) .flip-card-inner {
+    border: 2px solid #27ae60; /* Color del borde para la tercera carta */
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3); /* Efecto de sombra para la tercera carta */
+    background-color: #D9EAC5; /* Fondo de la tarjeta "back" para la tercera carta */
+  }
+  
